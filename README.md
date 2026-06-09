@@ -1,4 +1,4 @@
-# Logesh Legal Solutions — Website
+# Logan Legal Solutions — Website
 
 A professional consumer-rights advocacy website with complaint filing via WhatsApp & Telegram.
 
