@@ -134,7 +134,7 @@
     if (e.key === "Escape") closeModal();
   });
 
-  function buildMessage() {
+  function buildMessage(forTelegram = false) {
     const subject = subjectProduct.value.trim();
     const details = issueDetails.value.trim();
     const phone = phoneNumber.value.trim();
@@ -142,6 +142,16 @@
     if (!subject || !details || !phone) {
       alert("Please fill in Service/Product Details, Issue Details, and phone number.");
       return null;
+    }
+
+    if (forTelegram) {
+      return (
+        `New Complaint — ${cfg.firmName}\n\n` +
+        `Category: ${selectedIssue}\n` +
+        `Phone: ${phone}\n\n` +
+        `Service/Product Details:\n${subject}\n\n` +
+        `Issue Details:\n${details}`
+      );
     }
 
     return (
@@ -161,7 +171,7 @@
   });
 
   document.getElementById("sendTelegram").addEventListener("click", () => {
-    const message = buildMessage();
+    const message = buildMessage(true);
     if (!message) return;
     openTelegram(message);
     closeModal();

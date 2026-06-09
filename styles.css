@@ -846,22 +846,22 @@ body {
 
 @media (max-width: 768px) {
   :root {
-    --appbar-height: 60px;
+    --appbar-height: 70px;
   }
 
   .appbar-inner {
     padding: 0 0.65rem;
     justify-content: space-between;
-    gap: 0.5rem;
+    gap: 0.45rem;
     width: 100%;
   }
 
   .appbar-brand {
     flex: 0 1 auto;
-    max-width: 46%;
-    font-size: 0.72rem;
+    max-width: 48%;
+    font-size: 0.95rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.15;
     white-space: normal;
     overflow: visible;
     text-overflow: unset;
@@ -872,13 +872,14 @@ body {
     flex: 0 0 auto;
     margin-left: auto;
     padding: 0.2rem;
-    gap: 0.12rem;
+    gap: 0.1rem;
   }
 
   .appbar-tab {
-    padding: 0.4rem 0.55rem;
-    font-size: 0.68rem;
-    min-width: 2.6rem;
+    padding: 0.5rem 0.62rem;
+    font-size: 0.84rem;
+    min-width: 0;
+    line-height: 1.1;
   }
 
   .tab-text-long {
@@ -919,7 +920,7 @@ body {
 
 @media (max-width: 480px) {
   body {
-    padding-top: 60px;
+    padding-top: var(--appbar-height);
   }
 
   .appbar {
@@ -934,22 +935,22 @@ body {
   }
 
   .appbar-brand {
-    font-size: 0.64rem;
+    font-size: 0.88rem;
     font-weight: 700;
-    line-height: 1.2;
-    max-width: 44%;
+    line-height: 1.15;
+    max-width: 46%;
   }
 
   .appbar-tabs {
-    padding: 0.15rem;
-    gap: 0.1rem;
+    padding: 0.16rem;
+    gap: 0.08rem;
   }
 
   .appbar-tab {
-    padding: 0.36rem 0.45rem;
-    font-size: 0.62rem;
-    min-width: 2.45rem;
-    line-height: 1.15;
+    padding: 0.46rem 0.5rem;
+    font-size: 0.8rem;
+    min-width: 0;
+    line-height: 1.1;
   }
 
   .tab-text-long {
