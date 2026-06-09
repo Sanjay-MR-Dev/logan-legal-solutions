@@ -19,7 +19,7 @@ const SITE_CONFIG = {
   instagram: "https://www.instagram.com/loganlegalsolutions?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
 
   // Telegram username (without @) — messages open in Telegram share
-  telegramUsername: "logeshLogan",
+  telegramUsername: "LogeshLogan",
 
   // Path to lawyer photo (place your image in assets/ folder)
   photoPath: "assets/Advocate.jpg",

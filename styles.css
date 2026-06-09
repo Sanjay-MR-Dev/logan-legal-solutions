@@ -68,7 +68,8 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 0.75rem;
   padding: 0 1.5rem;
 }
 
@@ -79,7 +80,8 @@ body {
   color: var(--text-primary);
   text-decoration: none;
   letter-spacing: -0.01em;
-  line-height: 1;
+  line-height: 1.15;
+  flex-shrink: 0;
 }
 
 .appbar-tabs {
@@ -107,10 +109,7 @@ body {
   border-radius: 50px;
   transition: all var(--transition);
   text-align: center;
-
   white-space: nowrap;
-  overflow: visible;
-  text-overflow: unset;
 }
 
 .tab-text-short {
@@ -831,26 +830,6 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .tab-text-long {
-    display: none;
-  }
-
-  .tab-text-short {
-    display: inline;
-  }
-
-  .appbar-tabs {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .appbar-tab {
-    padding: 0.38rem 0.4rem;
-    font-size: 0.7rem;
-  }
-}
-
 @media (max-width: 1024px) {
   .complaint-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -867,34 +846,39 @@ body {
 
 @media (max-width: 768px) {
   :root {
-    --appbar-height: 58px;
+    --appbar-height: 60px;
   }
 
   .appbar-inner {
-    padding: 0 1rem;
+    padding: 0 0.65rem;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
   }
 
   .appbar-brand {
+    flex: 0 1 auto;
+    max-width: 46%;
     font-size: 0.72rem;
-    max-width: 34%;
-    flex-shrink: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-weight: 600;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    text-align: left;
   }
 
   .appbar-tabs {
-    flex: 1;
-    min-width: 0;
-    max-width: none;
+    flex: 0 0 auto;
+    margin-left: auto;
     padding: 0.2rem;
-    gap: 0.1rem;
+    gap: 0.12rem;
   }
 
   .appbar-tab {
-    padding: 0.38rem 0.45rem;
+    padding: 0.4rem 0.55rem;
     font-size: 0.68rem;
+    min-width: 2.6rem;
   }
 
   .tab-text-long {
@@ -935,7 +919,7 @@ body {
 
 @media (max-width: 480px) {
   body {
-    padding-top: 58px;
+    padding-top: 60px;
   }
 
   .appbar {
@@ -944,34 +928,28 @@ body {
   }
 
   .appbar-inner {
-    flex-direction: row;
-    align-items: center;
+    padding: 0 0.5rem;
     gap: 0.35rem;
-    padding: 0 0.75rem;
     height: 100%;
   }
 
   .appbar-brand {
-    max-width: 30%;
-    text-align: left;
-    font-size: 0.62rem;
-    font-weight: 600;
+    font-size: 0.64rem;
+    font-weight: 700;
     line-height: 1.2;
-    flex-shrink: 0;
+    max-width: 44%;
   }
 
   .appbar-tabs {
-    flex: 1;
-    min-width: 0;
-    max-width: none;
     padding: 0.15rem;
-    gap: 0.08rem;
+    gap: 0.1rem;
   }
 
   .appbar-tab {
-    padding: 0.35rem 0.25rem;
-    font-size: clamp(0.58rem, 2.8vw, 0.65rem);
-    line-height: 1.2;
+    padding: 0.36rem 0.45rem;
+    font-size: 0.62rem;
+    min-width: 2.45rem;
+    line-height: 1.15;
   }
 
   .tab-text-long {

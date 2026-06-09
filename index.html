@@ -216,12 +216,12 @@
       <div class="modal-header">
         <span class="modal-category" id="modalCategory">Category</span>
         <h2 id="modalTitle">File Your Complaint</h2>
-        <p>Describe your issue, phone number, and optionally add up to 3 photos as proof.</p>
+        <p>Enter service or product details, describe your issue, and share your phone number.</p>
       </div>
       <form id="complaintForm" class="complaint-form">
         <div class="form-group">
-          <label for="subjectProduct" id="subjectProductLabel">Subject or Product Details <span class="required">*</span></label>
-          <input type="text" id="subjectProduct" name="subjectProduct" placeholder="e.g. Product name, company name, order ID..." required />
+          <label for="subjectProduct">Service or Product Details <span class="required">*</span></label>
+          <input type="text" id="subjectProduct" name="subjectProduct" placeholder="e.g. Service name, product name, company, order ID..." required />
         </div>
         <div class="form-group">
           <label for="issueDetails">Issue Details <span class="required">*</span></label>
@@ -230,11 +230,6 @@
         <div class="form-group">
           <label for="phoneNumber">Your Phone Number <span class="required">*</span></label>
           <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+91 98765 43210" pattern="[0-9+\s\-()]{10,15}" required />
-        </div>
-        <div class="form-group">
-          <label>Upload Photos <span class="optional">(optional, max 3)</span></label>
-          <p class="photo-hint">Add one photo at a time. After each upload, you can add another (up to 3).</p>
-          <div id="photoSlots" class="photo-slots"></div>
         </div>
         <div class="send-options">
           <p class="send-label">Send via:</p>
